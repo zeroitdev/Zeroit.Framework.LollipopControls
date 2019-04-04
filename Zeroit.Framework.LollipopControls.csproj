@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DA4476D-4744-4A71-B5E0-2DC5FD3FAAA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeroit.Framework.LollipopControls</RootNamespace>
+    <AssemblyName>Zeroit.Framework.LollipopControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Zeroit.Framework.LollipopControls.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Zeroit.Framework.LollipopControls.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ZeroitStrongKeys.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\AnimationDirection.cs" />
+    <Compile Include="Animations\AnimationManager.cs" />
+    <Compile Include="Animations\Animations.cs" />
+    <Compile Include="Controls\ZeroitLollipopComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopSlider.Designer.cs">
+      <DependentUpon>ZeroitLollipopSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ZeroitLolliClickButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopMaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIManagers\DrawHelper.cs" />
+    <Compile Include="UIManagers\FontManager.cs" />
+    <Compile Include="Controls\ZeroitLollipopButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopFileInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopFolderInPut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopSmallCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZeroitLollipopToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIManagers\IMaterialControl.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Roboto-Regular.ttf" />
+    <None Include="Zeroit.Framework.LollipopControls.nuspec" />
+    <None Include="ZeroitStrongKeys.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
